@@ -5,9 +5,9 @@ class NoticeMailer < ApplicationMailer
   #
   #   en.notice_mailer.sendmail_blog.subject
   #
-  def sendmail_blog
-    @greeting = "Hi"
+  def sendmail_blog(blog)
+    @blog = blog
 
-    mail to: "to@example.org"
+    mail to: "to@example.org", subject: "新規ブログが作成されました"
   end
 end
